@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Blogie</title>
+    <style>
+        h2 {
+            padding: 20px 0;
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
+
+        .ex-box-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        .ex-box-btn > button + button {
+            margin-left: 15px;
+        }
+
+        .ex-box {
+            margin-top: 25px;
+            max-width: 400px;
+        }
+
+        .ex-box:last-child {
+            margin-bottom: 25px;
+        }
+
+        .ex-box > label + label {
+            margin-top: 15px;
+        } 
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Buttons</h2>
+        <div class="ex-box-btn">
+            <button class="btn">Button</button>
+            <button class="btn btn-main">Button</button>
+            <button class="btn btn-primary">Button</button>
+            <button class="btn btn-succes">Button</button>
+            <button class="btn btn-info">Button</button>
+            <button class="btn btn-warning">Button</button>
+            <button class="btn btn-danger">Button</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ex-box">
+            <h2>Inputs</h2>
+            <div class="input-group">
+                <label for="input">Specific keyword to consider <span class="help-text">Help text</span></label>
+                <input name="input" type="text" placeholder="Enter keywords">
+                <span class="description">Use comma after enter word. They will automaticly added.</span>
+            </div>
+    
+            <div class="input-group">
+                <label for="input">Specific keyword to consider</label>
+                <input name="input" type="text" placeholder="Enter keywords" disabled="disabled">
+            </div>
+    
+            <div class="input-group">
+                <label for="input">Specific keyword to consider</label>
+                <input class="succes" name="input" type="text" placeholder="Enter keywords">
+            </div>
+    
+            <div class="input-group">
+                <label for="input">Specific keyword to consider</label>
+                <input class="warning" name="input" type="text" placeholder="Enter keywords">
+            </div>
+            
+            <div class="input-group">
+                <label for="input">Specific keyword to consider</label>
+                <input class="info" name="input" type="text" placeholder="Enter keywords">
+            </div>
+    
+            <div class="input-group">
+                <label for="input">Specific keyword to consider</label>
+                <input class="error" name="input" type="text" placeholder="Enter keywords">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ex-box">
+            <h2>Select</h2>
+            <div class="input-group">
+                <label for="select">Number of words in each</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <span class="selected-option">Select</span>
+                        <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99991 6.99998C6.77191 6.99998 6.54491 6.92298 6.35991 6.76798L0.359909 1.76798C-0.0640909 1.41498 -0.122091 0.783984 0.231909 0.359984C0.584909 -0.0640163 1.21491 -0.121016 1.63991 0.231984L7.01091 4.70798L12.3729 0.392984C12.8029 0.0469837 13.4329 0.114984 13.7789 0.544984C14.1249 0.974984 14.0569 1.60398 13.6269 1.95098L7.62691 6.77898C7.44391 6.92598 7.22191 6.99998 6.99991 6.99998Z" fill="#8F9BB3"/>
+                        </svg>
+                    </div>
+                    <div class="select-dropdown">
+                        <ul class="dropdown">
+                            <li data-value ="Option 1">Option 1</li>
+                            <li data-value ="Option 2">Option 2</li>
+                            <li data-value ="Option 3">Option 3</li>
+                            <li data-value ="Option 4">Option 4</li>
+                            <li data-value ="Option 5">Option 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ex-box">
+            <h2>Checkboxes</h2>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="name" id="name">
+                <span>
+                    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.03854 0.429263C6.39259 -0.0379573 7.07178 -0.139509 7.55554 0.202441C8.0393 0.544391 8.14445 1.20035 7.79039 1.66757L4.43119 6.10046C4.06878 6.5787 3.36974 6.63233 2.93862 6.21496L0.317012 3.67696C-0.106383 3.26707 -0.105565 2.6033 0.318838 2.19438C0.743241 1.78546 1.43052 1.78625 1.85391 2.19614L3.49539 3.78526L6.03854 0.429263Z" fill="white"/>
+                    </svg>
+                </span>
+                <p>Checkbox</p>
+            </label>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" name="name" id="name" disabled="disabled">
+                <span>
+                    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.03854 0.429263C6.39259 -0.0379573 7.07178 -0.139509 7.55554 0.202441C8.0393 0.544391 8.14445 1.20035 7.79039 1.66757L4.43119 6.10046C4.06878 6.5787 3.36974 6.63233 2.93862 6.21496L0.317012 3.67696C-0.106383 3.26707 -0.105565 2.6033 0.318838 2.19438C0.743241 1.78546 1.43052 1.78625 1.85391 2.19614L3.49539 3.78526L6.03854 0.429263Z" fill="white"/>
+                    </svg>
+                </span>
+                <p>Disabled</p>
+            </label>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" name="name" id="name" disabled="disabled" checked="checked">
+                <span>
+                    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.03854 0.429263C6.39259 -0.0379573 7.07178 -0.139509 7.55554 0.202441C8.0393 0.544391 8.14445 1.20035 7.79039 1.66757L4.43119 6.10046C4.06878 6.5787 3.36974 6.63233 2.93862 6.21496L0.317012 3.67696C-0.106383 3.26707 -0.105565 2.6033 0.318838 2.19438C0.743241 1.78546 1.43052 1.78625 1.85391 2.19614L3.49539 3.78526L6.03854 0.429263Z" fill="white"/>
+                    </svg>
+                </span>
+                <p>Checked disabled</p>
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ex-box">
+            <h2>Radio Buttons</h2>
+            <label class="custom-radio">
+                <input type="radio" name="radio" checked />
+                <p>Radio - checked</p>
+            </label>
+
+            <label class="custom-radio">
+                <input type="radio" name="radio" />
+                <p>Radio</p>
+            </label>
+
+            <label class="custom-radio">
+                <input type="radio" name="radio" checked disabled="disabled" />
+                <p>Radio - checked</p>
+            </label>
+
+            <label class="custom-radio">
+                <input type="radio" name="radio" disabled="disabled"/>
+                <p>Disabled</p>
+            </label>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

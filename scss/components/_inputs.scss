@@ -1,0 +1,229 @@
+// * Inputs
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $clr-basic-700;
+        font-size: $fs-small;
+        line-height: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    input {
+        color: $clr-basic-800;
+        font-family: $ff-main;
+        font-size: $fs-medium;
+        line-height: 2rem;
+        font-weight: $fw-400;
+        padding: 12px 16px;
+        border: 1px solid $clr-basic-400;
+        border-radius: 8px;
+        outline: none;
+        background-color: $clr-basic-200;
+        transition: border .2s, background-color .2s linear;
+
+        &::placeholder {
+            color: $clr-basic-600;
+        }
+    
+        &:hover {
+            background-color: $clr-basic-300;
+        }
+    
+        &:focus {
+            border: 1px solid $clr-primary;
+        }
+    
+        &:disabled {
+            cursor: no-drop;
+            pointer-events: none;
+            background-color: $clr-basic-200;
+        }
+    
+        &.succes {
+            border: 1px solid $clr-succes;
+            background-color: $clr-white;
+        }
+    
+        &.info {
+            border: 1px solid $clr-info;
+            background-color: $clr-white;
+        }
+    
+        &.warning {
+            border: 1px solid $clr-warning;
+            background-color: $clr-white;
+        }
+    
+        &.error {
+            border: 1px solid $clr-danger;
+            background-color: $clr-white;   
+        }
+    }
+
+    .description {
+        color: $clr-basic-600;
+        font-size: $fs-small;
+        line-height: 1.6rem;
+        margin-top: 8px;
+    }
+}
+
+.input-group:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+// * Selects
+.custom-select-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .custom-select {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $clr-basic-600;
+        font-family: $ff-main;
+        font-size: $fs-medium;
+        line-height: 2rem;
+        font-weight: $fw-400;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid $clr-basic-400;
+        background: $clr-basic-200;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $clr-basic-300; 
+        }
+
+        svg {
+            transition: transform .2s ease;
+        }
+    }
+
+    .select-dropdown {
+        display: none;
+        background-color: $clr-white;
+        border: 1px solid $clr-basic-400;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 99;
+        top: 105%;
+        width: 100%;
+        ul {
+            background-color: $clr-white;
+            border-radius: 4px;
+            li {
+                cursor: pointer;
+                padding: 12px 16px;
+                color: $clr-basic-800;
+                &:hover {
+                    background-color: $clr-basic-300;
+                    color: $clr-basic-800;
+                }
+            }
+            li:first-child {
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+            li:last-child {
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+        }
+    }
+}
+
+// * Checkboxes
+.custom-checkbox {
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+        position: absolute;
+        height: 0;
+        width: 0;
+        padding: 0;
+        opacity: 0;
+
+        &:checked ~ span {
+            background: $clr-primary;
+            border-color: $clr-primary;
+            transition: all .2s ease;
+            
+            &:hover {
+                background-color: $hover-primary;
+            }
+        }
+        
+        &:checked ~ span svg {
+            opacity: 1;
+        }
+
+        &:disabled ~ span {
+            background-color: $clr-basic-300;
+            border-color: $clr-basic-500;
+            cursor: no-drop;
+            pointer-events: none;
+        }
+
+        &:disabled:checked ~ span {
+            background-color: $clr-basic-500;
+            border-color: $clr-basic-500;
+        }
+    }
+    
+    span {
+        cursor: pointer;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        background: $clr-basic-400;
+        border: 1px solid $clr-basic-500;
+        border-radius: 3px;
+        transition: all .2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            border-color: $hover-primary;
+        }
+
+        svg {
+            opacity: 0;
+            transition: all .2s ease;
+        }
+    }
+
+    p {
+        margin-left: 10px;
+    }
+}
+
+// * Radio Buttons
+.custom-radio {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    input[type="radio"] {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        margin-left: 10px;
+    }
+}

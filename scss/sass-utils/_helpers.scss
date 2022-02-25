@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $ff-main;
+    font-size: $fs-regular;
+    font-weight: $fw-400;
+    color: $clr-basic-800;
+    line-height: 2.4rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-primary;
+    line-height: 2.4rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.rotate-180 {
+    transform: rotate(180deg) !important;
+}

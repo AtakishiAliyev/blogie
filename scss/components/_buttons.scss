@@ -1,0 +1,93 @@
+// * Buttons
+.btn {
+    background-color: $clr-basic-300;
+    color: $clr-basic-800;
+    border: none; 
+    font-family: $ff-main;
+    font-size: $fs-medium;
+    font-weight: $fw-500;
+    line-height: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 4px;
+}
+
+.btn-main {
+    background-color: $clr-brand-500;
+    color: $clr-basic-800;
+}
+
+.btn-main:hover {
+    background-color: $hover-brand;
+}
+
+.btn-main:focus {
+    background-color: $pressed-brand;
+}
+
+.btn-primary {
+    background-color: $clr-primary;
+    color: $clr-white;
+}
+
+.btn-primary:hover {
+    background-color: $hover-info;
+}
+
+.btn-primary:focus {
+    background-color: $hover-info;
+}
+
+.btn-succes {
+    background-color: $clr-succes;
+    color: $clr-white;
+}
+
+.btn-succes:hover {
+    background-color: $hover-succes;
+}
+
+.btn-succes:focus {
+    background-color: $pressed-succes;
+}
+
+.btn-info {
+    background-color: $clr-info;
+    color: $clr-white;
+}
+
+.btn-info:hover {
+    background-color: $hover-info;
+}
+
+.btn-info:focus {
+    background-color: $pressed-info;
+}
+
+.btn-warning {
+    background-color: $clr-warning;
+    color: $clr-white;
+}
+
+.btn-warning:hover {
+    background-color: $hover-warning;
+}
+
+.btn-warning:focus {
+    background-color: $pressed-warning;
+}
+
+.btn-danger {
+    background-color: $clr-danger;
+    color: $clr-white;
+}
+
+.btn-danger:hover {
+    background-color: $hover-danger;
+}
+
+.btn-danger:focus {
+    background-color: $pressed-danger;
+}
