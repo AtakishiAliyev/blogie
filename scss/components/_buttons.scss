@@ -1,5 +1,6 @@
 // * Buttons
 .btn {
+    display: block;
     background-color: $clr-basic-300;
     color: $clr-basic-800;
     border: none; 
@@ -90,4 +91,10 @@
 
 .btn-danger:focus {
     background-color: $pressed-danger;
+}
+
+.btn-control {
+    background-color: $clr-white;
+    color: $clr-basic-800;
+    border: 1px solid $clr-disable; 
 }

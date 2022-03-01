@@ -27,7 +27,7 @@ a {
 }
 
 .container {
-    width: 90%;
+    width: 95%;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -36,6 +36,28 @@ a {
     display: block !important;
 }
 
+.d-none {
+    display: none !important;
+}
+
+.d-m-none {
+    display: block !important;
+}
+
+.d-m-block {
+    display: none !important;
+}
+
 .rotate-180 {
     transform: rotate(180deg) !important;
+}
+
+@include mobile {
+    .d-m-block {
+        display: block !important;
+    }
+
+    .d-m-none {
+        display: none !important;
+    }   
 }

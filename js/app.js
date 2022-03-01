@@ -1,24 +1,70 @@
-// * Custom Select Box
-const customSelectBtn = document.querySelector(".custom-select");
-const selectArrow = document.querySelector(".custom-select svg");
-const selectDropdown = document.querySelector(".select-dropdown");
-const customSelectValue = document.querySelector(".selected-option");
-const customSelectElement = document.querySelectorAll(".dropdown li");
+// * Navbar Active Link Class
+const links = document.querySelectorAll(".nav-links li a");
 
-for (let i = 0; i < customSelectElement.length; i++) {
-    customSelectElement[i].addEventListener("click", () => {
-        selectValue = customSelectElement[i].getAttribute("data-value");
-        customSelectValue.innerHTML = selectValue;
+for (let i = 0; i < links.length; i++) {
+
+    links[i].addEventListener("click", function() {
+        const current = document.getElementsByClassName("active");
+        if (current.length > 0) { 
+            current[0].className = current[0].className.replace("active", "");
+        }
+        this.className += "active";
     });
 }
 
-customSelectBtn.addEventListener("click", (event) => {
-    event.stopPropagation();
-    selectDropdown.classList.toggle("d-block");
-    selectArrow.classList.toggle("rotate-180");
-});
+
+// * Custom Select Box
+const btns = document.querySelectorAll(".custom-select-wrapper");
+
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(event) {
+        event.stopPropagation();
+        dropdown = this.querySelector(".select-dropdown");
+        svg = this.querySelector("svg");
+
+        if(!svg) {
+            dropdown.classList.toggle("d-block");
+        } else {
+            dropdown.classList.toggle("d-block");
+            svg.classList.toggle("rotate-180");
+        }
+
+        options = this.querySelectorAll(".dropdown li");
+        value = this.querySelector(".selected-option");
+
+        for (let j = 0; j < options.length; j++) {
+            options[j].addEventListener("click", function() {
+                value.innerHTML = this.getAttribute("data-value");
+            }
+        )}
+    });
+}
+
+const dropdownList = document.querySelectorAll(".select-dropdown");
+const dropdownListSvg = document.querySelectorAll("svg");
 
 window.onclick = function () {
-    selectDropdown.classList.remove("d-block");
-    selectArrow.classList.remove("rotate-180");
+    for(let i = 0; i < dropdownList.length; i++) {
+        if(dropdownList[i].classList == 'select-dropdown d-block') {
+            dropdownList[i].classList.remove("d-block");
+            dropdownListSvg[i].classList.remove("rotate-180");
+        }
+    }
 };
+
+const closeMenu = document.querySelector('.menu-close');
+const openMenu = document.querySelector('.menu-open');
+
+const navbar = document.querySelector('.navbar');
+const overlay = document.querySelector('.menu-overlay');
+
+openMenu.addEventListener("click", function() {
+    navbar.classList.add("menu-active");
+    overlay.classList.add("menu-overlay-active");
+
+})
+
+closeMenu.addEventListener("click", function() {
+    navbar.classList.remove("menu-active");
+    overlay.classList.remove("menu-overlay-active");
+})
