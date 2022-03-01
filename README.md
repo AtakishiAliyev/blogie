@@ -4,5 +4,5 @@
 
 
 
- [Project live link](https://atakishialiyev.github.io/blogia)
+ [Project live link](https://atakishialiyev.github.io/blogie)
  
