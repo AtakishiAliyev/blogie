@@ -190,6 +190,12 @@ a {
   margin-right: 12px;
 }
 
+@media (max-width: 768px) {
+  .btn-social {
+    padding: 14px 10px;
+  }
+}
+
 .input-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,6 +1155,7 @@ header {
     padding: 14px 0 10px;
     font-size: 1.6rem;
     line-height: 2.4rem;
+    text-transform: unset;
   }
   .login-mobile-item a.active {
     background-color: #ffffff;

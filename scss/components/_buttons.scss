@@ -111,3 +111,9 @@
         margin-right: 12px;
     }
 }
+
+@include tablet {
+    .btn-social {
+        padding: 14px 10px;
+    } 
+}
