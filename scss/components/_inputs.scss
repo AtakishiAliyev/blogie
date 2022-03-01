@@ -201,7 +201,10 @@
     }
 
     p {
-        margin-left: 10px;
+        margin-left: 6px;
+        font-size: $fs-medium;
+        line-height: 1.6rem;
+        color: $clr-basic-700;
     }
 }
 

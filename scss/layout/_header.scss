@@ -1,16 +1,11 @@
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
     background: $clr-white;
     border-bottom: 1px solid $clr-basic-300;
-    z-index: 30;
-    transition: transform .3s ease-in-out;
 }
 
 .header {
     @include flex-row(flex-start);
-    max-height: 88px;
+    height: $header-height;
 
     .logo {
         flex-grow: 1;
@@ -114,9 +109,28 @@ header {
     .mobile-currency {
         display: none;
     }
+
+    .login-wrapper {
+        @include flex-row(flex-start);
+
+        span {
+            font-size: $fs-medium;
+            line-height: 2rem;
+            color: $clr-basic-700;
+            margin-right: 32px;
+        }
+
+        .btn {
+            font-size: $fs-medium;
+            line-height: 1.6rem;
+            border-radius: 8px;
+            border-color: $clr-basic-800;
+            text-transform: unset;
+        }
+    }
 }
 
-@include mobile {
+@include tablet {
     .menu-overlay-active {
         display: block !important;
     }
@@ -137,7 +151,8 @@ header {
         left: 0;
         top: 0;
         width: 100%;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
         background-color: $clr-basic-1100;
         opacity: 0.72;
         z-index: 5;
@@ -146,6 +161,10 @@ header {
 
     header {
         padding: 20px 0;
+
+        .header {
+            height: auto;
+        }
 
         .logo {
             a {
@@ -163,7 +182,8 @@ header {
             flex-direction: column !important;
             justify-content: flex-start !important;
             position: fixed;
-            height: 100vh;
+            height: auto;
+            min-height: 100vh;
             width: 320px;
             top: 0;
             left: -100%;
@@ -272,6 +292,15 @@ header {
                     }
                 }
             }
+        }
+
+        .login-wrapper {
+            display: none !important;
+        }
+
+        .login-close {
+            color: $clr-basic-700;
+            font-size: 2rem;
         }
     }
 }

@@ -1,0 +1,129 @@
+ .login-page-block {
+     padding: 50px 0;
+     height: calc(100vh - #{$header-height});
+
+     .login-page-item {
+         @include flex-row(space-evenly);
+
+         .image-block {
+            @include flex-row(center);
+         }
+
+         .login-block {
+            @include flex-row(center);
+         }
+     }
+ }
+
+ .login-block-item {
+    min-width: 320px;
+
+    .title {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h3 {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            margin: 0 0 8px;    
+        }
+
+        span {
+            color: $clr-basic-600;
+            font-size: $fs-medium;
+            line-height: 2rem;
+        }
+    }
+
+    .login-social-networks {
+        @include flex-row(flex-start);
+        gap: 10px;
+
+        .btn {
+            flex-grow: 1;
+        }
+    }
+
+    .login-or {
+        @include flex-row(center);
+        position: relative;
+        margin: 16px 0;
+
+        span {
+            @include flex-row(flex-start);
+            color: $clr-basic-600;
+            position: relative;
+            z-index: 3;
+            font-size: $fs-medium;
+            line-height: 2rem;
+            background: #fff;
+            padding: 0 32px;
+        }
+
+        &::before {
+            content: "";
+            background: $clr-basic-400;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 1px;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    .login-remember {
+        @include flex-row(space-between);
+        margin: 25px 0 0;
+
+        .forgot-password {
+            font-size: $fs-medium;
+            line-height: 2rem;
+        }
+    }
+
+    .login-submit {
+        margin-top: 60px;
+
+        .btn {
+            text-transform: unset;
+            border-radius: 8px;
+            padding: 14px 0;
+        }
+    }
+}
+
+@include tablet {
+    .login-mobile-item {
+        @include flex-row(flex-start);
+        gap: 16px;
+        padding: 24px 16px 0;
+        background-color: $clr-brand-500;
+
+        .btn {
+            flex-grow: 1;
+            border-radius: 8px 8px 0 0;
+            background-color: $clr-brand-300;
+            padding: 14px 0 10px;
+            font-size: $fs-regular;
+            line-height: 2.4rem;
+        }
+
+        a.active {
+            background-color: $clr-white;
+        }
+    }
+
+    .login-page-block {
+        padding: 0;
+
+        .login-block {
+            width: 100%;
+
+            .login-block-item {
+                min-width: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
+}

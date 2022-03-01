@@ -52,12 +52,22 @@ a {
     transform: rotate(180deg) !important;
 }
 
-@include mobile {
+@include desktop {
+    .clear-border {
+        border: none !important;
+    }  
+}
+
+@include tablet {
+    .container {
+        width: 90%;
+    }
+
     .d-m-block {
         display: block !important;
     }
 
     .d-m-none {
         display: none !important;
-    }   
+    }  
 }
