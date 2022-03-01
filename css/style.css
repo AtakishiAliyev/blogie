@@ -852,5 +852,9 @@ header {
   header .navbar .mobile-currency .custom-select-wrapper .custom-select svg {
     margin-left: 14px;
   }
+  header .navbar .mobile-currency .custom-select-wrapper .select-dropdown {
+    bottom: 105%;
+    top: unset !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

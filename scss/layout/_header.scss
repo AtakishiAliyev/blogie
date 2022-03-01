@@ -265,6 +265,11 @@ header {
                             margin-left: 14px;
                         }
                     }
+
+                    .select-dropdown {
+                        bottom: 105%;
+                        top: unset !important;
+                    }
                 }
             }
         }
