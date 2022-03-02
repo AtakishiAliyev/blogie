@@ -1001,6 +1001,7 @@ header {
 
 .login-block-item {
   min-width: 320px;
+  padding-bottom: 50px;
 }
 
 .login-block-item .title {
