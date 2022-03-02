@@ -147,7 +147,7 @@ header {
 
     .menu-overlay {
         display: none;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
@@ -155,12 +155,17 @@ header {
         min-height: 100vh;
         background-color: $clr-basic-1100;
         opacity: 0.72;
-        z-index: 5;
+        z-index: 9;
         transition: all .4s ease;
     }
 
     header {
         padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
 
         .header {
             height: auto;

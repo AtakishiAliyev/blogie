@@ -17,6 +17,7 @@
             background: rgba(255, 255, 255, 0.32);
             border-radius: 50%;
             overflow: hidden;
+            z-index: 1;
         }
 
         .text-side {
@@ -24,6 +25,12 @@
             overflow: auto;
             padding: 50px 110px 0;
             margin-bottom: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
 
             .image {
                 @include flex-row(center);
@@ -46,7 +53,7 @@
 
     .form-side__block {
         width: 50%;
-        padding: 50px 110px 0;
+        padding: 50px 110px;
 
         .form-side {
             max-width: 380px;
@@ -107,6 +114,51 @@
                     text-transform: unset;
                     border-radius: 8px;
                     line-height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .content-order-wrapper {
+        flex-direction: column-reverse;
+
+        .form-side__block {
+            width: 90%;
+            margin: 25px auto;
+            padding: 0;
+            @include flex-row(center);
+
+            .form-continue {
+                background: $clr-white;
+                border-top: 1px solid $clr-basic-200;
+                position: fixed;
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                z-index: 8;
+                padding: 16px;
+            }
+        }
+
+        .text-side__block {
+            width: 100%;
+            overflow: auto;
+
+            &::after {
+                display: none;
+            }
+
+            .text-side {
+                height: auto;
+                position: static;
+                width: 90%;
+                margin: 0 auto;
+                padding: 50px 0 100px;
+
+                .image img {
+                    width: 100%;
                 }
             }
         }
