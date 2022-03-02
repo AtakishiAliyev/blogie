@@ -112,6 +112,11 @@
     }
 }
 
+.btn-green {
+    background-color: $clr-green;
+    color: $clr-white;
+}
+
 @include tablet {
     .btn-social {
         padding: 14px 10px;
