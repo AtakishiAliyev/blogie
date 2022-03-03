@@ -1,0 +1,43 @@
+.my-orders-wrapper {
+    background-color: $clr-basic-300;
+    padding: 25px 0 50px;
+    min-height: 100vh;
+
+    .my-orders__block {
+        @include flex-row(space-between);
+        align-items: flex-start;
+
+        .user-menu__block {
+            width: 25%;
+        }
+
+        .user-content__block {
+            background-color: $clr-white;
+            height: 200px;
+            width: 70%;
+        }
+    }
+}
+
+@include tablet {
+    .my-orders-wrapper {
+        padding-top: 91px !important;
+
+        .container {
+            width: 100%;
+        }   
+    }
+
+    .my-orders__block {
+        flex-direction: column;
+
+        .user-menu__block {
+            margin-bottom: 25px;
+        }
+
+        .user-content__block {
+            width: 90% !important;
+            margin: 0 auto;
+        }
+    }
+}
