@@ -117,6 +117,23 @@
     color: $clr-white;
 }
 
+.add-order {
+    @include flex-row(flex-start);
+    background-color: $clr-succes;
+    color: $clr-white;
+    font-size: $fs-small;
+    line-height: 1.6rem;
+    font-weight: $fw-400;
+    padding: 8px 12px;
+    border-radius: 4px;
+
+    svg {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
 @include tablet {
     .btn-social {
         padding: 14px 10px;

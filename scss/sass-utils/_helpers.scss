@@ -52,6 +52,14 @@ a {
     transform: rotate(180deg) !important;
 }
 
+.status-completed {
+    color: $clr-succes !important;
+}
+
+.status-pending {
+    color: $clr-warning !important;
+}
+
 @include desktop {
     .clear-border {
         border: none !important;

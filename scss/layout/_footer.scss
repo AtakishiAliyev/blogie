@@ -1,0 +1,11 @@
+.footer {
+    background-color: $clr-basic-200;
+    padding: 24px 0;
+
+    p {
+        color: $clr-basic-700;
+        font-size: $fs-medium;
+        line-height: 2rem;
+        text-align: center;
+    }
+}

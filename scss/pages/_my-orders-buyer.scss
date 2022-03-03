@@ -1,7 +1,7 @@
 .my-orders-wrapper {
     background-color: $clr-basic-300;
     padding: 25px 0 50px;
-    min-height: 100vh;
+    min-height: calc(100vh - 158px);
 
     .my-orders__block {
         @include flex-row(space-between);
@@ -12,9 +12,74 @@
         }
 
         .user-content__block {
-            background-color: $clr-white;
-            height: 200px;
+            background-color: transparent;
             width: 70%;
+            
+            .user-content {
+                
+                .header__block {
+                    @include flex-row(space-between);
+
+                    h3 {
+                        color: $clr-basic-800;
+                        font-size: 2.4rem;
+                        line-height: 3.2rem;
+                        font-weight: $fw-500;
+                    }
+                }
+
+                .table__block {
+                    margin-top: 32px;
+
+                    .item__block{
+                        width: 100%;
+                        padding: 24px 24px;
+                        background-color: $clr-white;
+                        border-radius: 8px;
+                        @include flex-row(space-between);
+
+                        .item {
+                            @include flex-column(flex-start);
+                            flex-grow: 1;
+
+                            span {
+                                color: $clr-basic-600;
+                                font-size: $fs-small;
+                                line-height: 1.6rem;
+                            }
+
+                            p {
+                                color: $clr-basic-700;
+                                font-size: $fs-medium;
+                                line-height: 2rem;
+                                font-weight: $fw-500;
+                                margin-top: 4px;
+                            } 
+
+                        }
+
+                        .arrow {
+                            @include flex-row(center);
+                            flex-grow: 0;
+                            width: 32px;
+                            height: 32px;
+                            border: 1px solid $clr-info;
+                            border-radius: 100%;
+                            background-color: rgba(0, 149, 255, 0.08);
+                            cursor: pointer;
+
+                            svg {
+                                fill: $clr-info;
+                            }
+                        }
+                    }
+
+                    & > .item__block+ .item__block{
+                        margin-top: 8px;
+                    }
+                    
+                }
+            }
         }
     }
 }
@@ -38,6 +103,29 @@
         .user-content__block {
             width: 90% !important;
             margin: 0 auto;
+        }
+    }
+
+    .table__block {
+        & > .item__block+ .item__block{
+            margin-top: 16px !important;
+        }
+
+        .item__block{
+            justify-content: center !important;
+
+            .item {
+                width: 50%;
+            }
+
+            .item:nth-child(n + 3) {
+                margin-top: 24px;
+            }
+
+            .arrow {
+                margin-top: 40px !important;
+            }
+            
         }
     }
 }

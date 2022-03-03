@@ -55,6 +55,14 @@ a {
           transform: rotate(180deg) !important;
 }
 
+.status-completed {
+  color: #00d68f !important;
+}
+
+.status-pending {
+  color: #ffaa00 !important;
+}
+
 @media (min-width: 992px) {
   .clear-border {
     border: none !important;
@@ -193,6 +201,37 @@ a {
 .btn-green {
   background-color: #00bf71;
   color: #ffffff;
+}
+
+.add-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #00d68f;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.add-order svg {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 768px) {
@@ -940,6 +979,18 @@ header {
   }
 }
 
+.footer {
+  background-color: #f7f9fc;
+  padding: 24px 0;
+}
+
+.footer p {
+  color: #2e3a59;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
 .user-menu__block {
   max-width: 280px;
   background-color: #ffffff;
@@ -962,7 +1013,7 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 32px 24px 32px 24px;
+  padding: 32px 24px 112px 24px;
 }
 
 .user-menu__block .user-menu .title {
@@ -1563,7 +1614,7 @@ header {
 .my-orders-wrapper {
   background-color: #edf1f7;
   padding: 25px 0 50px;
-  min-height: 100vh;
+  min-height: calc(100vh - 158px);
 }
 
 .my-orders-wrapper .my-orders__block {
@@ -1592,9 +1643,129 @@ header {
 }
 
 .my-orders-wrapper .my-orders__block .user-content__block {
-  background-color: #ffffff;
-  height: 200px;
+  background-color: transparent;
   width: 70%;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .header__block h3 {
+  color: #222b45;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block {
+  margin-top: 32px;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block {
+  width: 100%;
+  padding: 24px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item span {
+  color: #8f9bb3;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item p {
+  color: #2e3a59;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #0095ff;
+  border-radius: 100%;
+  background-color: rgba(0, 149, 255, 0.08);
+  cursor: pointer;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .arrow svg {
+  fill: #0095ff;
+}
+
+.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block > .item__block + .item__block {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1616,6 +1787,23 @@ header {
   .my-orders__block .user-content__block {
     width: 90% !important;
     margin: 0 auto;
+  }
+  .table__block > .item__block + .item__block {
+    margin-top: 16px !important;
+  }
+  .table__block .item__block {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .table__block .item__block .item {
+    width: 50%;
+  }
+  .table__block .item__block .item:nth-child(n + 3) {
+    margin-top: 24px;
+  }
+  .table__block .item__block .arrow {
+    margin-top: 40px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
