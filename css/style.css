@@ -1053,7 +1053,7 @@ header {
   .user-menu__block .user-menu ul li {
     width: auto;
     display: inline-block;
-    margin-top: 0;
+    margin-top: 0 !important;
   }
   .user-menu__block .user-menu ul li a {
     display: -webkit-box;
