@@ -997,7 +997,7 @@ header {
   border-radius: 8px;
 }
 
-.user-menu__block .user-menu {
+.user-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1016,7 +1016,7 @@ header {
   padding: 32px 24px 112px 24px;
 }
 
-.user-menu__block .user-menu .title {
+.user-menu .title {
   color: #8f9bb3;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -1024,15 +1024,11 @@ header {
   width: 100%;
 }
 
-.user-menu__block .user-menu ul {
+.user-menu ul {
   width: 100%;
 }
 
-.user-menu__block .user-menu ul li {
-  width: 100%;
-}
-
-.user-menu__block .user-menu ul li a {
+.user-menu ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1053,19 +1049,19 @@ header {
   font-weight: 500;
 }
 
-.user-menu__block .user-menu ul li a svg {
+.user-menu ul a svg {
   width: 24px;
   height: 24px;
   margin-right: 16px;
 }
 
-.user-menu__block .user-menu ul li a.active {
+.user-menu ul a.active {
   background-color: #ffd339;
   color: #2e3a59;
   border-radius: 8px;
 }
 
-.user-menu__block .user-menu ul > li + li {
+.user-menu ul > li + li {
   margin-top: 8px;
 }
 
@@ -1075,11 +1071,11 @@ header {
     max-width: 100%;
     border-radius: 0;
   }
-  .user-menu__block .user-menu {
+  .user-menu {
     width: 100%;
     padding: 0;
   }
-  .user-menu__block .user-menu ul {
+  .user-menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1098,15 +1094,15 @@ header {
     overflow-x: scroll;
     padding: 16px 20px;
   }
-  .user-menu__block .user-menu ul::-webkit-scrollbar {
+  .user-menu ul::-webkit-scrollbar {
     display: none;
   }
-  .user-menu__block .user-menu ul li {
+  .user-menu ul li {
     width: auto;
     display: inline-block;
     margin-top: 0 !important;
   }
-  .user-menu__block .user-menu ul li a {
+  .user-menu ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1129,16 +1125,17 @@ header {
     cursor: pointer;
     border-radius: 25px;
     background-color: transparent;
+    font-size: 1.4rem;
   }
-  .user-menu__block .user-menu ul li a.active {
+  .user-menu ul li a.active {
     background-color: #2e3a59;
     color: #ffffff;
     border-radius: 25px;
   }
-  .user-menu__block .user-menu ul li a svg {
+  .user-menu ul li a svg {
     display: none;
   }
-  .user-menu__block .user-menu ul > li + li {
+  .user-menu ul > li + li {
     margin-left: 8px;
   }
 }
@@ -1614,7 +1611,7 @@ header {
 .my-orders-wrapper {
   background-color: #edf1f7;
   padding: 25px 0 50px;
-  min-height: calc(100vh - 158px);
+  min-height: 100vh;
 }
 
 .my-orders-wrapper .my-orders__block {
@@ -1642,12 +1639,12 @@ header {
   width: 25%;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block {
+.user-content__block {
   background-color: transparent;
   width: 70%;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .header__block {
+.user-content__block .header__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1665,18 +1662,22 @@ header {
           justify-content: space-between;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .header__block h3 {
+.user-content__block .header__block h3 {
   color: #222b45;
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: 500;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block {
+.user-content__block .table__block {
   margin-top: 32px;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block {
+.user-content__block .table__block > .item__block + .item__block {
+  margin-top: 8px;
+}
+
+.item__block {
   width: 100%;
   padding: 24px 24px;
   background-color: #ffffff;
@@ -1698,7 +1699,7 @@ header {
           justify-content: space-between;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item {
+.item__block .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1714,18 +1715,16 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: calc(90% / 4);
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item span {
+.item__block .item span {
   color: #8f9bb3;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .item p {
+.item__block .item p {
   color: #2e3a59;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -1733,7 +1732,17 @@ header {
   margin-top: 4px;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .arrow {
+.item__block .item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 10%;
+}
+
+.item__block .arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1749,9 +1758,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
   width: 32px;
   height: 32px;
   border: 1px solid #0095ff;
@@ -1760,12 +1766,8 @@ header {
   cursor: pointer;
 }
 
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block .item__block .arrow svg {
+.item__block .arrow svg {
   fill: #0095ff;
-}
-
-.my-orders-wrapper .my-orders__block .user-content__block .user-content .table__block > .item__block + .item__block {
-  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1797,13 +1799,17 @@ header {
             justify-content: center !important;
   }
   .table__block .item__block .item {
-    width: 50%;
+    width: 50% !important;
   }
   .table__block .item__block .item:nth-child(n + 3) {
     margin-top: 24px;
   }
-  .table__block .item__block .arrow {
-    margin-top: 40px !important;
+  .table__block .item__block .item:last-child {
+    margin-top: 40px;
+    width: 100% !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

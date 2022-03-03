@@ -2,48 +2,44 @@
     max-width: 280px;
     background-color: $clr-white;
     border-radius: 8px;
+}
 
-    .user-menu {
-        @include flex-column(flex-start);
-        padding: 32px 24px 112px 24px;
+.user-menu {
+    @include flex-column(flex-start);
+    padding: 32px 24px 112px 24px;
 
-        .title {
-            color: $clr-basic-600;
-            font-size: $fs-regular;
-            line-height: 2.4rem;
-            padding: 0 0 40px 24px;
-            width: 100%;
+    .title {
+        color: $clr-basic-600;
+        font-size: $fs-regular;
+        line-height: 2.4rem;
+        padding: 0 0 40px 24px;
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+
+        a {
+            @include flex-row(flex-start); 
+            color: $clr-basic-800;
+            padding: 12px 24px;
+            font-weight: $fw-500;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+            }
+
+            &.active {
+                background-color: $clr-brand-500;
+                color: $clr-basic-700;
+                border-radius: 8px;
+            }
         }
 
-        ul {
-            width: 100%;
-
-            li {
-                width: 100%;
-
-                a {
-                    @include flex-row(flex-start); 
-                    color: $clr-basic-800;
-                    padding: 12px 24px;
-                    font-weight: $fw-500;
-
-                    svg {
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 16px;
-                    }
-
-                    &.active {
-                        background-color: $clr-brand-500;
-                        color: $clr-basic-700;
-                        border-radius: 8px;
-                    }
-                }
-            }
-
-            & > li + li {
-                margin-top: 8px;
-            }
+        & > li + li {
+            margin-top: 8px;
         }
     }
 }
@@ -53,54 +49,55 @@
         width: 100% !important;
         max-width: 100%;
         border-radius: 0;
+    }
 
-        .user-menu {
-            width: 100%;
-            padding: 0;
+    .user-menu {
+        width: 100%;
+        padding: 0;
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                align-items: center;
-                overflow-x: scroll;
-                padding: 16px 20px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: scroll;
+            padding: 16px 20px;
 
-                &::-webkit-scrollbar {
-                    display: none;
-                }
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
-                li {
-                    width: auto;
-                    display: inline-block;
-                    margin-top: 0 !important;
+            li {
+                width: auto;
+                display: inline-block;
+                margin-top: 0 !important;
 
-                    a {
-                        @include flex-row(center);
-                        white-space: nowrap;
-                        padding: 6px 16px;
-                        border: 1px solid $clr-basic-700;
-                        color: $clr-basic-700;
-                        cursor: pointer;
+                a {
+                    @include flex-row(center);
+                    white-space: nowrap;
+                    padding: 6px 16px;
+                    border: 1px solid $clr-basic-700;
+                    color: $clr-basic-700;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    background-color: transparent;
+                    font-size: $fs-medium;
+
+                    &.active {
+                        background-color: $clr-basic-700;
+                        color: $clr-white;
                         border-radius: 25px;
-                        background-color: transparent;
+                    }
 
-                        &.active {
-                            background-color: $clr-basic-700;
-                            color: $clr-white;
-                            border-radius: 25px;
-                        }
-
-                        svg {
-                            display: none;
-                        }
+                    svg {
+                        display: none;
                     }
                 }
+            }
 
-                & > li + li {
-                    margin-left: 8px;
-                }
+            & > li + li {
+                margin-left: 8px;
             }
         }
     }
