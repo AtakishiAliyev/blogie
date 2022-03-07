@@ -223,104 +223,494 @@
                             </button>
                         </div>
                         <div class="table__block">
-                            <div class="item__block">
-                                <div class="item">
-                                    <span>Order ID:</span>
-                                    <p>10055</p>
-                                </div>
-                                <div class="item">
-                                    <span>Date:</span>
-                                    <p>Jul 3, 2020</p>
-                                </div>
-                                <div class="item">
-                                    <span>Price:</span>
-                                    <p>$570</p>
-                                </div>
-                                <div class="item">
-                                    <span>Status:</span>
-                                    <p class="status-completed">Completed</p>
-                                </div>
-                                <div class="item">
+                            <div class="collapsible">
+                                <div class="collapsible-header">
+                                    <div class="item">
+                                        <span>Order ID:</span>
+                                        <p>10055</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Date:</span>
+                                        <p>Jul 3, 2020</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Price:</span>
+                                        <p>$570</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Status:</span>
+                                        <p class="status-completed">Completed</p>
+                                    </div>
                                     <div class="arrow">
                                         <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00001 6.50001C4.74401 6.50001 4.48801 6.40201 4.29301 6.20701L0.293006 2.20701C-0.0979941 1.81601 -0.0979941 1.18401 0.293006 0.793006C0.684006 0.402006 1.31601 0.402006 1.70701 0.793006L5.01201 4.09801L8.30501 0.918006C8.70401 0.535006 9.33501 0.546006 9.71901 0.943006C10.103 1.34001 10.092 1.97401 9.69501 2.35701L5.69501 6.21901C5.50001 6.40701 5.25001 6.50001 5.00001 6.50001Z"/>
                                         </svg> 
                                     </div>
+                                </div>
+                                <div class="collapsible-content">
+                                    <div class="collapsible-content__block">
+                                        <div class="collapsible-item">
+                                            <div class="data">
+                                                <div class="header">
+                                                    <div class="title">
+                                                        <span>#1</span>
+                                                        <a href="#">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M14.617 19.552C15.666 18.054 16.757 15.851 16.975 13H19.93C19.547 16.052 17.441 18.57 14.617 19.552V19.552ZM4.069 13H7.061C7.267 15.862 8.344 18.056 9.407 19.561C6.57 18.584 4.454 16.061 4.069 13V13ZM9.438 4.429C8.386 5.927 7.285 8.137 7.065 11H4.069C4.455 7.928 6.586 5.397 9.438 4.429V4.429ZM9.079 11C9.385 7.728 11.059 5.45 12.026 4.397C13.026 5.468 14.674 7.725 14.959 11H9.079ZM9.08 13H14.962C14.656 16.277 12.978 18.555 12.012 19.608C10.965 18.498 9.359 16.272 9.08 13V13ZM19.93 11H16.978C16.773 8.151 15.708 5.964 14.65 4.461C17.458 5.451 19.549 7.96 19.93 11V11ZM22 12C22 6.496 17.529 2.018 12.028 2.002C12.024 2.002 12.02 2.001 12.015 2.001C12.011 2.001 12.005 2 12 2C6.486 2 2 6.487 2 12C2 17.514 6.486 22 12 22C12.006 22 12.011 21.999 12.015 21.999C12.017 21.999 12.018 22 12.02 22C12.023 22 12.026 21.998 12.028 21.998C17.529 21.983 22 17.504 22 12V12Z"
+                                                                    fill="#2E3A59"
+                                                                ></path>
+                                                            </svg>
+                                                            https://www.nytimes.com
+                                                        </a>
+                                                    </div>
+                                                    <button class="edit-content">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M11.9831 7.32281L6.36614 12.9398L6.10214 15.8958L9.07914 15.6248L14.6791 10.0188L11.9831 7.32281ZM17.9661 6.72881L15.2711 4.03481L13.3231 5.98281L16.0181 8.67881L17.9661 6.72881ZM5.09114 17.9958C5.06014 17.9988 5.03014 17.9998 5.00014 17.9998C4.73614 17.9998 4.48114 17.8958 4.29314 17.7068C4.08314 17.4968 3.97714 17.2048 4.00414 16.9098L4.38314 12.7388C4.42514 12.2818 4.62714 11.8508 4.95214 11.5258L13.9481 2.52881C14.6501 1.82481 15.9241 1.85981 16.6641 2.59881L19.4021 5.33681H19.4031C20.1691 6.10381 20.1991 7.32081 19.4711 8.05081L10.4741 17.0478C10.1491 17.3738 9.71914 17.5748 9.26114 17.6168L5.09114 17.9958ZM5 19.9999H19C19.55 19.9999 20 20.4499 20 20.9999C20 21.5499 19.55 21.9999 19 21.9999H5C4.45 21.9999 4 21.5499 4 20.9999C4 20.4499 4.45 19.9999 5 19.9999Z"
+                                                                fill="#2E3A59"
+                                                            ></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="element">
+                                                        <span>Type:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article language:</span>
+                                                        <p>English</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Title:</span>
+                                                        <p>Benchmarking in the business side</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Target URL:</span>
+                                                        <p class="fw-400">https://pickvisa.com/visa-chance-calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Anchor text:</span>
+                                                        <p>Visa chance calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Who is the author?:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article link:</span>
+                                                        <p class="fw-400">Not submitted yet by seller</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stepper">
+                                                <div class="line"></div>
+                                                <div class="box done">
+                                                    <div class="number">
+                                                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M7.07555 11.9999C6.89155 11.9999 6.71555 11.9239 6.58955 11.7899L3.34755 8.33725C3.09488 8.06925 3.10888 7.64725 3.37688 7.39525C3.64555 7.14325 4.06755 7.15658 4.31888 7.42458L7.06888 10.3519L12.6742 4.21725C12.9235 3.94458 13.3449 3.92658 13.6169 4.17458C13.8882 4.42258 13.9069 4.84458 13.6589 5.11591L7.56755 11.7826C7.44288 11.9199 7.26555 11.9986 7.08021 11.9999H7.07555Z"
+                                                                fill="white"
+                                                            ></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Payment received</span>
+                                                </div>
+                                                <div class="box active">
+                                                    <div class="number">
+                                                        2
+                                                    </div>
+                                                    <span>Details added</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        3
+                                                    </div>
+                                                    <span>Request accepted</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        4
+                                                    </div>
+                                                    <span>Article ready</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        5
+                                                    </div>
+                                                    <span>Article posted</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="collapsible-item">
+                                            <div class="data">
+                                                <div class="header">
+                                                    <div class="title">
+                                                        <span>#2</span>
+                                                        <a href="#">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M14.617 19.552C15.666 18.054 16.757 15.851 16.975 13H19.93C19.547 16.052 17.441 18.57 14.617 19.552V19.552ZM4.069 13H7.061C7.267 15.862 8.344 18.056 9.407 19.561C6.57 18.584 4.454 16.061 4.069 13V13ZM9.438 4.429C8.386 5.927 7.285 8.137 7.065 11H4.069C4.455 7.928 6.586 5.397 9.438 4.429V4.429ZM9.079 11C9.385 7.728 11.059 5.45 12.026 4.397C13.026 5.468 14.674 7.725 14.959 11H9.079ZM9.08 13H14.962C14.656 16.277 12.978 18.555 12.012 19.608C10.965 18.498 9.359 16.272 9.08 13V13ZM19.93 11H16.978C16.773 8.151 15.708 5.964 14.65 4.461C17.458 5.451 19.549 7.96 19.93 11V11ZM22 12C22 6.496 17.529 2.018 12.028 2.002C12.024 2.002 12.02 2.001 12.015 2.001C12.011 2.001 12.005 2 12 2C6.486 2 2 6.487 2 12C2 17.514 6.486 22 12 22C12.006 22 12.011 21.999 12.015 21.999C12.017 21.999 12.018 22 12.02 22C12.023 22 12.026 21.998 12.028 21.998C17.529 21.983 22 17.504 22 12V12Z"
+                                                                    fill="#2E3A59"
+                                                                ></path>
+                                                            </svg>
+                                                            https://www.medium.com
+                                                        </a>
+                                                    </div>
+                                                    <button class="edit-content">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M11.9831 7.32281L6.36614 12.9398L6.10214 15.8958L9.07914 15.6248L14.6791 10.0188L11.9831 7.32281ZM17.9661 6.72881L15.2711 4.03481L13.3231 5.98281L16.0181 8.67881L17.9661 6.72881ZM5.09114 17.9958C5.06014 17.9988 5.03014 17.9998 5.00014 17.9998C4.73614 17.9998 4.48114 17.8958 4.29314 17.7068C4.08314 17.4968 3.97714 17.2048 4.00414 16.9098L4.38314 12.7388C4.42514 12.2818 4.62714 11.8508 4.95214 11.5258L13.9481 2.52881C14.6501 1.82481 15.9241 1.85981 16.6641 2.59881L19.4021 5.33681H19.4031C20.1691 6.10381 20.1991 7.32081 19.4711 8.05081L10.4741 17.0478C10.1491 17.3738 9.71914 17.5748 9.26114 17.6168L5.09114 17.9958ZM5 19.9999H19C19.55 19.9999 20 20.4499 20 20.9999C20 21.5499 19.55 21.9999 19 21.9999H5C4.45 21.9999 4 21.5499 4 20.9999C4 20.4499 4.45 19.9999 5 19.9999Z"
+                                                                fill="#2E3A59"
+                                                            ></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="element">
+                                                        <span>Type:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article language:</span>
+                                                        <p>English</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Title:</span>
+                                                        <p>Worry less about spacing in design tools</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Target URL:</span>
+                                                        <p class="fw-400">https://vizam.az/travel-insurance</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Anchor text:</span>
+                                                        <p>Travel Insurance</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Who is the author?:</span>
+                                                        <p>Myself: designtools.docx</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article link:</span>
+                                                        <a href="#">uxplanet.org/interface-designpatterns </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stepper">
+                                                <div class="line"></div>
+                                                <div class="box done">
+                                                    <div class="number">
+                                                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M7.07555 11.9999C6.89155 11.9999 6.71555 11.9239 6.58955 11.7899L3.34755 8.33725C3.09488 8.06925 3.10888 7.64725 3.37688 7.39525C3.64555 7.14325 4.06755 7.15658 4.31888 7.42458L7.06888 10.3519L12.6742 4.21725C12.9235 3.94458 13.3449 3.92658 13.6169 4.17458C13.8882 4.42258 13.9069 4.84458 13.6589 5.11591L7.56755 11.7826C7.44288 11.9199 7.26555 11.9986 7.08021 11.9999H7.07555Z"
+                                                                fill="white"
+                                                            ></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Payment received</span>
+                                                </div>
+                                                <div class="box active">
+                                                    <div class="number">
+                                                        2
+                                                    </div>
+                                                    <span>Details added</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        3
+                                                    </div>
+                                                    <span>Request accepted</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        4
+                                                    </div>
+                                                    <span>Article ready</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        5
+                                                    </div>
+                                                    <span>Article posted</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="item__block">
-                                <div class="item">
-                                    <span>Order ID:</span>
-                                    <p>10055</p>
-                                </div>
-                                <div class="item">
-                                    <span>Date:</span>
-                                    <p>Jul 3, 2020</p>
-                                </div>
-                                <div class="item">
-                                    <span>Price:</span>
-                                    <p>$570</p>
-                                </div>
-                                <div class="item">
-                                    <span>Status:</span>
-                                    <p class="status-pending">Pending</p>
-                                </div>
-                                <div class="item">
+                            <div class="collapsible">
+                                <div class="collapsible-header">
+                                    <div class="item">
+                                        <span>Order ID:</span>
+                                        <p>10055</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Date:</span>
+                                        <p>Jul 3, 2020</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Price:</span>
+                                        <p>$570</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Status:</span>
+                                        <p class="status-completed">Completed</p>
+                                    </div>
                                     <div class="arrow">
                                         <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00001 6.50001C4.74401 6.50001 4.48801 6.40201 4.29301 6.20701L0.293006 2.20701C-0.0979941 1.81601 -0.0979941 1.18401 0.293006 0.793006C0.684006 0.402006 1.31601 0.402006 1.70701 0.793006L5.01201 4.09801L8.30501 0.918006C8.70401 0.535006 9.33501 0.546006 9.71901 0.943006C10.103 1.34001 10.092 1.97401 9.69501 2.35701L5.69501 6.21901C5.50001 6.40701 5.25001 6.50001 5.00001 6.50001Z"/>
                                         </svg> 
                                     </div>
+                                </div>
+                                <div class="collapsible-content">
+                                    <div class="collapsible-content__block">
+                                        <div class="collapsible-item">
+                                            <div class="data">
+                                                <div class="header">
+                                                    <div class="title">
+                                                        <span>#1</span>
+                                                        <a href="#">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M14.617 19.552C15.666 18.054 16.757 15.851 16.975 13H19.93C19.547 16.052 17.441 18.57 14.617 19.552V19.552ZM4.069 13H7.061C7.267 15.862 8.344 18.056 9.407 19.561C6.57 18.584 4.454 16.061 4.069 13V13ZM9.438 4.429C8.386 5.927 7.285 8.137 7.065 11H4.069C4.455 7.928 6.586 5.397 9.438 4.429V4.429ZM9.079 11C9.385 7.728 11.059 5.45 12.026 4.397C13.026 5.468 14.674 7.725 14.959 11H9.079ZM9.08 13H14.962C14.656 16.277 12.978 18.555 12.012 19.608C10.965 18.498 9.359 16.272 9.08 13V13ZM19.93 11H16.978C16.773 8.151 15.708 5.964 14.65 4.461C17.458 5.451 19.549 7.96 19.93 11V11ZM22 12C22 6.496 17.529 2.018 12.028 2.002C12.024 2.002 12.02 2.001 12.015 2.001C12.011 2.001 12.005 2 12 2C6.486 2 2 6.487 2 12C2 17.514 6.486 22 12 22C12.006 22 12.011 21.999 12.015 21.999C12.017 21.999 12.018 22 12.02 22C12.023 22 12.026 21.998 12.028 21.998C17.529 21.983 22 17.504 22 12V12Z"
+                                                                    fill="#2E3A59"
+                                                                ></path>
+                                                            </svg>
+                                                            https://www.nytimes.com
+                                                        </a>
+                                                    </div>
+                                                    <button class="edit-content">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M11.9831 7.32281L6.36614 12.9398L6.10214 15.8958L9.07914 15.6248L14.6791 10.0188L11.9831 7.32281ZM17.9661 6.72881L15.2711 4.03481L13.3231 5.98281L16.0181 8.67881L17.9661 6.72881ZM5.09114 17.9958C5.06014 17.9988 5.03014 17.9998 5.00014 17.9998C4.73614 17.9998 4.48114 17.8958 4.29314 17.7068C4.08314 17.4968 3.97714 17.2048 4.00414 16.9098L4.38314 12.7388C4.42514 12.2818 4.62714 11.8508 4.95214 11.5258L13.9481 2.52881C14.6501 1.82481 15.9241 1.85981 16.6641 2.59881L19.4021 5.33681H19.4031C20.1691 6.10381 20.1991 7.32081 19.4711 8.05081L10.4741 17.0478C10.1491 17.3738 9.71914 17.5748 9.26114 17.6168L5.09114 17.9958ZM5 19.9999H19C19.55 19.9999 20 20.4499 20 20.9999C20 21.5499 19.55 21.9999 19 21.9999H5C4.45 21.9999 4 21.5499 4 20.9999C4 20.4499 4.45 19.9999 5 19.9999Z"
+                                                                fill="#2E3A59"
+                                                            ></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="element">
+                                                        <span>Type:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article language:</span>
+                                                        <p>English</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Title:</span>
+                                                        <p>Benchmarking in the business side</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Target URL:</span>
+                                                        <p class="fw-400">https://pickvisa.com/visa-chance-calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Anchor text:</span>
+                                                        <p>Visa chance calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Who is the author?:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article link:</span>
+                                                        <p class="fw-400">Not submitted yet by seller</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stepper">
+                                                <div class="line"></div>
+                                                <div class="box done">
+                                                    <div class="number">
+                                                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M7.07555 11.9999C6.89155 11.9999 6.71555 11.9239 6.58955 11.7899L3.34755 8.33725C3.09488 8.06925 3.10888 7.64725 3.37688 7.39525C3.64555 7.14325 4.06755 7.15658 4.31888 7.42458L7.06888 10.3519L12.6742 4.21725C12.9235 3.94458 13.3449 3.92658 13.6169 4.17458C13.8882 4.42258 13.9069 4.84458 13.6589 5.11591L7.56755 11.7826C7.44288 11.9199 7.26555 11.9986 7.08021 11.9999H7.07555Z"
+                                                                fill="white"
+                                                            ></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Payment received</span>
+                                                </div>
+                                                <div class="box active">
+                                                    <div class="number">
+                                                        2
+                                                    </div>
+                                                    <span>Details added</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        3
+                                                    </div>
+                                                    <span>Request accepted</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        4
+                                                    </div>
+                                                    <span>Article ready</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        5
+                                                    </div>
+                                                    <span>Article posted</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="item__block">
-                                <div class="item">
-                                    <span>Order ID:</span>
-                                    <p>10055</p>
-                                </div>
-                                <div class="item">
-                                    <span>Date:</span>
-                                    <p>Jul 3, 2020</p>
-                                </div>
-                                <div class="item">
-                                    <span>Price:</span>
-                                    <p>$570</p>
-                                </div>
-                                <div class="item">
-                                    <span>Status:</span>
-                                    <p class="status-completed">Completed</p>
-                                </div>
-                                <div class="item">
+                            <div class="collapsible">
+                                <div class="collapsible-header">
+                                    <div class="item">
+                                        <span>Order ID:</span>
+                                        <p>10055</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Date:</span>
+                                        <p>Jul 3, 2020</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Price:</span>
+                                        <p>$570</p>
+                                    </div>
+                                    <div class="item">
+                                        <span>Status:</span>
+                                        <p class="status-pending">Pending</p>
+                                    </div>
                                     <div class="arrow">
                                         <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00001 6.50001C4.74401 6.50001 4.48801 6.40201 4.29301 6.20701L0.293006 2.20701C-0.0979941 1.81601 -0.0979941 1.18401 0.293006 0.793006C0.684006 0.402006 1.31601 0.402006 1.70701 0.793006L5.01201 4.09801L8.30501 0.918006C8.70401 0.535006 9.33501 0.546006 9.71901 0.943006C10.103 1.34001 10.092 1.97401 9.69501 2.35701L5.69501 6.21901C5.50001 6.40701 5.25001 6.50001 5.00001 6.50001Z"/>
                                         </svg> 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item__block">
-                                <div class="item">
-                                    <span>Order ID:</span>
-                                    <p>10055</p>
-                                </div>
-                                <div class="item">
-                                    <span>Date:</span>
-                                    <p>Jul 3, 2020</p>
-                                </div>
-                                <div class="item">
-                                    <span>Price:</span>
-                                    <p>$570</p>
-                                </div>
-                                <div class="item">
-                                    <span>Status:</span>
-                                    <p class="status-completed">Completed</p>
-                                </div>
-                                <div class="item">
-                                    <div class="arrow">
-                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00001 6.50001C4.74401 6.50001 4.48801 6.40201 4.29301 6.20701L0.293006 2.20701C-0.0979941 1.81601 -0.0979941 1.18401 0.293006 0.793006C0.684006 0.402006 1.31601 0.402006 1.70701 0.793006L5.01201 4.09801L8.30501 0.918006C8.70401 0.535006 9.33501 0.546006 9.71901 0.943006C10.103 1.34001 10.092 1.97401 9.69501 2.35701L5.69501 6.21901C5.50001 6.40701 5.25001 6.50001 5.00001 6.50001Z"/>
-                                        </svg> 
+                                <div class="collapsible-content">
+                                    <div class="collapsible-content__block">
+                                        <div class="collapsible-item">
+                                            <div class="data">
+                                                <div class="header">
+                                                    <div class="title">
+                                                        <span>#1</span>
+                                                        <a href="#">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M14.617 19.552C15.666 18.054 16.757 15.851 16.975 13H19.93C19.547 16.052 17.441 18.57 14.617 19.552V19.552ZM4.069 13H7.061C7.267 15.862 8.344 18.056 9.407 19.561C6.57 18.584 4.454 16.061 4.069 13V13ZM9.438 4.429C8.386 5.927 7.285 8.137 7.065 11H4.069C4.455 7.928 6.586 5.397 9.438 4.429V4.429ZM9.079 11C9.385 7.728 11.059 5.45 12.026 4.397C13.026 5.468 14.674 7.725 14.959 11H9.079ZM9.08 13H14.962C14.656 16.277 12.978 18.555 12.012 19.608C10.965 18.498 9.359 16.272 9.08 13V13ZM19.93 11H16.978C16.773 8.151 15.708 5.964 14.65 4.461C17.458 5.451 19.549 7.96 19.93 11V11ZM22 12C22 6.496 17.529 2.018 12.028 2.002C12.024 2.002 12.02 2.001 12.015 2.001C12.011 2.001 12.005 2 12 2C6.486 2 2 6.487 2 12C2 17.514 6.486 22 12 22C12.006 22 12.011 21.999 12.015 21.999C12.017 21.999 12.018 22 12.02 22C12.023 22 12.026 21.998 12.028 21.998C17.529 21.983 22 17.504 22 12V12Z"
+                                                                    fill="#2E3A59"
+                                                                ></path>
+                                                            </svg>
+                                                            https://www.nytimes.com
+                                                        </a>
+                                                    </div>
+                                                    <button class="edit-content">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M11.9831 7.32281L6.36614 12.9398L6.10214 15.8958L9.07914 15.6248L14.6791 10.0188L11.9831 7.32281ZM17.9661 6.72881L15.2711 4.03481L13.3231 5.98281L16.0181 8.67881L17.9661 6.72881ZM5.09114 17.9958C5.06014 17.9988 5.03014 17.9998 5.00014 17.9998C4.73614 17.9998 4.48114 17.8958 4.29314 17.7068C4.08314 17.4968 3.97714 17.2048 4.00414 16.9098L4.38314 12.7388C4.42514 12.2818 4.62714 11.8508 4.95214 11.5258L13.9481 2.52881C14.6501 1.82481 15.9241 1.85981 16.6641 2.59881L19.4021 5.33681H19.4031C20.1691 6.10381 20.1991 7.32081 19.4711 8.05081L10.4741 17.0478C10.1491 17.3738 9.71914 17.5748 9.26114 17.6168L5.09114 17.9958ZM5 19.9999H19C19.55 19.9999 20 20.4499 20 20.9999C20 21.5499 19.55 21.9999 19 21.9999H5C4.45 21.9999 4 21.5499 4 20.9999C4 20.4499 4.45 19.9999 5 19.9999Z"
+                                                                fill="#2E3A59"
+                                                            ></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="element">
+                                                        <span>Type:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article language:</span>
+                                                        <p>English</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Title:</span>
+                                                        <p>Benchmarking in the business side</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Target URL:</span>
+                                                        <p class="fw-400">https://pickvisa.com/visa-chance-calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Anchor text:</span>
+                                                        <p>Visa chance calculator</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Who is the author?:</span>
+                                                        <p>Press release</p>
+                                                    </div>
+                                                    <div class="element">
+                                                        <span>Article link:</span>
+                                                        <p class="fw-400">Not submitted yet by seller</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stepper">
+                                                <div class="line"></div>
+                                                <div class="box done">
+                                                    <div class="number">
+                                                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M7.07555 11.9999C6.89155 11.9999 6.71555 11.9239 6.58955 11.7899L3.34755 8.33725C3.09488 8.06925 3.10888 7.64725 3.37688 7.39525C3.64555 7.14325 4.06755 7.15658 4.31888 7.42458L7.06888 10.3519L12.6742 4.21725C12.9235 3.94458 13.3449 3.92658 13.6169 4.17458C13.8882 4.42258 13.9069 4.84458 13.6589 5.11591L7.56755 11.7826C7.44288 11.9199 7.26555 11.9986 7.08021 11.9999H7.07555Z"
+                                                                fill="white"
+                                                            ></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Payment received</span>
+                                                </div>
+                                                <div class="box active">
+                                                    <div class="number">
+                                                        2
+                                                    </div>
+                                                    <span>Details added</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        3
+                                                    </div>
+                                                    <span>Request accepted</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        4
+                                                    </div>
+                                                    <span>Article ready</span>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="number">
+                                                        5
+                                                    </div>
+                                                    <span>Article posted</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>

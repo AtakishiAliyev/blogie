@@ -52,6 +52,7 @@ window.onclick = function () {
     }
 };
 
+// * Mobile Menu Open and Close
 const closeMenu = document.querySelector('.menu-close');
 const openMenu = document.querySelector('.menu-open');
 
@@ -68,3 +69,20 @@ closeMenu.addEventListener("click", function() {
     navbar.classList.remove("menu-active");
     overlay.classList.remove("menu-overlay-active");
 })
+
+// * Collaps
+var btn = document.querySelectorAll(".arrow");
+
+for (var i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", function() {
+        this.classList.toggle("rotate-180");
+        
+        var content = this.parentNode.parentNode.querySelector(".collapsible-content");
+    
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
