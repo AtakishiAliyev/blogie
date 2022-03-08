@@ -1952,12 +1952,16 @@ header {
   position: relative;
 }
 
-.collapsible-item .stepper .box:nth-child(2) {
+.collapsible-item .stepper .box:first-child {
   padding: 0 16px 0 0;
 }
 
 .collapsible-item .stepper .box:last-child {
   padding: 0 0 0 16px;
+}
+
+.collapsible-item .stepper .box:last-child::after {
+  display: none;
 }
 
 .collapsible-item .stepper .box {
@@ -1980,6 +1984,16 @@ header {
   position: relative;
   padding: 0 16px;
   cursor: pointer;
+}
+
+.collapsible-item .stepper .box::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #edf1f7;
+  position: absolute;
+  top: 15px;
+  right: -100%;
 }
 
 .collapsible-item .stepper .box .number {
@@ -2034,14 +2048,6 @@ header {
 
 .collapsible-item .stepper .box.active span {
   color: #00d68f;
-}
-
-.collapsible-item .stepper .line {
-  position: absolute;
-  height: 1px;
-  background-color: #edf1f7;
-  width: 100%;
-  top: 15px;
 }
 
 @media (max-width: 768px) {
@@ -2119,7 +2125,7 @@ header {
   .collapsible-item .stepper::-webkit-scrollbar {
     display: none;
   }
-  .collapsible-item .stepper > .box:nth-child(2) {
+  .collapsible-item .stepper > .box:first-child {
     margin-left: 0 !important;
   }
   .collapsible-item .stepper > .box:last-child {
@@ -2130,12 +2136,6 @@ header {
   }
   .collapsible-item .stepper .box span {
     white-space: nowrap;
-  }
-  .collapsible-item .stepper .line {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: scroll;
   }
 }
 /*# sourceMappingURL=style.css.map */

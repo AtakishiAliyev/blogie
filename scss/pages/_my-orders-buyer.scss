@@ -205,12 +205,16 @@
         @include flex-row(space-between);
         position: relative;
 
-        .box:nth-child(2) {
+        .box:first-child {
             padding: 0 16px 0 0; 
         }
 
         .box:last-child {
             padding: 0 0 0 16px; 
+
+            &::after {
+                display: none;
+            }
         }
 
         .box {
@@ -219,6 +223,16 @@
             position: relative;
             padding: 0 16px;
             cursor: pointer;
+
+            &::after {
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $clr-basic-300;
+                position: absolute;
+                top: 15px;
+                right: -100%;
+            }
 
             .number {
                 @include flex-row(center);
@@ -265,13 +279,13 @@
             }
         }
 
-        .line {
-            position: absolute;
-            height: 1px;
-            background-color: $clr-basic-300;
-            width: 100%;
-            top: 15px;
-        }
+        // .line {
+        //     position: absolute;
+        //     height: 1px;
+        //     background-color: $clr-basic-300;
+        //     width: 100%;
+        //     top: 15px;
+        // }
     }
 }
 
@@ -352,7 +366,7 @@
                 display: none;
             }
 
-            & > .box:nth-child(2){
+            & > .box:first-child {
                 margin-left: 0 !important;
             }
 
@@ -370,12 +384,6 @@
                 span {
                     white-space: nowrap;
                 }
-            }
-
-            .line {
-                flex-wrap: nowrap;
-                width: 100%;
-                overflow-x: scroll;
             }
         }
     }
