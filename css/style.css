@@ -63,6 +63,11 @@ a {
   color: #ffaa00 !important;
 }
 
+.header-shadow {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 @media (min-width: 992px) {
   .clear-border {
     border: none !important;
@@ -78,6 +83,10 @@ a {
   }
   .d-m-none {
     display: none !important;
+  }
+  .header-shadow {
+    -webkit-filter: unset;
+            filter: unset;
   }
 }
 
@@ -778,6 +787,77 @@ header {
   border-radius: 8px;
   border-color: #222b45;
   text-transform: unset;
+}
+
+.header .logged-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.header .logged-in > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header .logged-in > div + div {
+  margin-left: 24px;
+}
+
+.header .logged-in .shopping-cart {
+  position: relative;
+}
+
+.header .logged-in .shopping-cart.active::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #FFD339;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header .logged-in .avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.header .logged-in .avatar img {
+  max-height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {

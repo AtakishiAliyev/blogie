@@ -128,6 +128,46 @@ header {
             text-transform: unset;
         }
     }
+
+    .logged-in {
+        @include flex-row(space-between);
+        flex-grow: 0;
+    
+        & > div {
+            @include flex-row(center);
+            cursor: pointer;
+        }
+
+        & > div + div {
+            margin-left: 24px;
+        }
+
+        .shopping-cart {
+            position: relative;
+
+            &.active::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: #FFD339;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+
+            img {
+                max-height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
 @include tablet {
