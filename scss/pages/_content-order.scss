@@ -1,5 +1,6 @@
 .content-order-wrapper {
     display: flex;
+    min-height: calc(100ch - 90px);
 
     .text-side__block {
         width: 50%;
@@ -69,8 +70,11 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-top: 16px;
                 gap: 5px;
+
+                &:not(:empty) {
+                    margin-top: 16px;
+                }
 
                 .keyword {
                     @include flex-row(center);
@@ -127,7 +131,7 @@
         .form-side__block {
             width: 90%;
             margin: 25px auto;
-            padding: 0;
+            padding: 91px 0 0 0;
             @include flex-row(center);
 
             .form-continue {

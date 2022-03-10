@@ -71,13 +71,13 @@ closeMenu.addEventListener("click", function() {
 })
 
 // * Collaps
-var btn = document.querySelectorAll(".arrow");
+const btn = document.querySelectorAll(".arrow");
 
-for (var i = 0; i < btn.length; i++) {
+for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", function() {
         this.classList.toggle("rotate-180");
         
-        var content = this.parentNode.parentNode.querySelector(".collapsible-content");
+        const content = this.parentNode.parentNode.querySelector(".collapsible-content");
     
         if (content.style.maxHeight){
             content.style.maxHeight = null;
@@ -86,3 +86,26 @@ for (var i = 0; i < btn.length; i++) {
         }
     });
 }
+
+// * Tags
+const keyword = document.querySelector('#keywords');
+
+function search(e) {
+    if(event.key === 'Enter') {
+        const para = document.createElement("a");
+        const block = document.querySelector('.keywords-block');
+        para.href = 'javascript:void(0);';
+        para.classList.add('keyword');
+        para.innerHTML = `${e.value} <i class="far fa-times close"></i>`;
+        keyword.value = '';
+        block.appendChild(para);
+    }
+    const close = document.querySelectorAll(".close");
+
+    for (let i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function() {
+            this.parentNode.remove();
+        })
+    }
+}
+

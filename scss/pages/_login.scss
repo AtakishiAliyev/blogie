@@ -95,24 +95,28 @@
 }
 
 @include tablet {
-    .login-mobile-item {
-        @include flex-row(flex-start);
-        gap: 16px;
-        padding: 24px 16px 0;
-        background-color: $clr-brand-500;
+    .login-mobile-block {
+        padding-top: 91px;
 
-        .btn {
-            flex-grow: 1;
-            border-radius: 8px 8px 0 0;
-            background-color: $clr-brand-300;
-            padding: 14px 0 10px;
-            font-size: $fs-regular;
-            line-height: 2.4rem;
-            text-transform: unset;
-        }
-
-        a.active {
-            background-color: $clr-white;
+        .login-mobile-item {
+            @include flex-row(flex-start);
+            gap: 16px;
+            padding: 24px 16px 0;
+            background-color: $clr-brand-500;
+    
+            .btn {
+                flex-grow: 1;
+                border-radius: 8px 8px 0 0;
+                background-color: $clr-brand-300;
+                padding: 14px 0 10px;
+                font-size: $fs-regular;
+                line-height: 2.4rem;
+                text-transform: unset;
+            }
+    
+            a.active {
+                background-color: $clr-white;
+            }
         }
     }
 
