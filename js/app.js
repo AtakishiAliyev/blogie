@@ -56,16 +56,19 @@ window.onclick = function () {
 const closeMenu = document.querySelector('.menu-close');
 const openMenu = document.querySelector('.menu-open');
 
-const navbar = document.querySelector('.navbar');
+const body = document.querySelector('body');
+const navbar = document.querySelector('.navbar-wrapper');
 const overlay = document.querySelector('.menu-overlay');
 
 openMenu.addEventListener("click", function() {
+    body.classList.add("overflow-hidden");
     navbar.classList.add("menu-active");
     overlay.classList.add("menu-overlay-active");
 
 })
 
 closeMenu.addEventListener("click", function() {
+    body.classList.remove("overflow-hidden");
     navbar.classList.remove("menu-active");
     overlay.classList.remove("menu-overlay-active");
 })
@@ -108,4 +111,3 @@ function search(e) {
         })
     }
 }
-
