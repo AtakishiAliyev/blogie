@@ -1,17 +1,15 @@
-// * Navbar Active Link Class
-const links = document.querySelectorAll(".nav-links li a");
+// * Mobile Navbar Active Link Class for Language
+const mobileLinks = document.querySelectorAll(".mobile-language a");
+for (let i = 0; i < mobileLinks.length; i++) {
 
-for (let i = 0; i < links.length; i++) {
-
-    links[i].addEventListener("click", function() {
-        const current = document.getElementsByClassName("active");
+    mobileLinks[i].addEventListener("click", function() {
+        const current = document.getElementsByClassName("btn active");
         if (current.length > 0) { 
-            current[0].className = current[0].className.replace("active", "");
+            current[0].className = current[0].className.replace(" active", "");
         }
-        this.className += "active";
+        this.className += " active";
     });
 }
-
 
 // * Custom Select Box
 const btns = document.querySelectorAll(".custom-select-wrapper");
@@ -73,6 +71,12 @@ closeMenu.addEventListener("click", function() {
     overlay.classList.remove("menu-overlay-active");
 })
 
+overlay.addEventListener("click", function() {
+    body.classList.remove("overflow-hidden");
+    navbar.classList.remove("menu-active");
+    overlay.classList.remove("menu-overlay-active");
+})
+
 // * Collaps
 const btn = document.querySelectorAll(".arrow");
 
@@ -87,6 +91,7 @@ for (let i = 0; i < btn.length; i++) {
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }
+
     });
 }
 

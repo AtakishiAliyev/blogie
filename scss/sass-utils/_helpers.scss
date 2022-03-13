@@ -64,9 +64,7 @@ a {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.overflow-hidden {
-    overflow: hidden!important;
-}
+
 
 @include desktop {
     .clear-border {
@@ -89,5 +87,9 @@ a {
 
     .header-shadow {
         filter: unset;
+    }
+
+    .overflow-hidden {
+        overflow: hidden!important;
     }
 }
